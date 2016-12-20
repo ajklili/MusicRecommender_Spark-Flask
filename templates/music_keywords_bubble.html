@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music Recommendation</title>
+    <script type="text/javascript">
+    var score
+
+    function score_n() {
+        score = 2;
+        window.location.href = "http://{{ server_ip }}:5432/{{ this_artist }}/" + score;
+    }
+
+    function score_p() {
+        score = 8;
+        window.location.href = "http://{{ server_ip }}:5432/{{ this_artist }}/" + score;
+    }
+
+    function displayer() {
+        alert('Score:' + score);
+    }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='music.css')}}" type="text/css">
+</head>
+
+<body>
+    <div id="page">
+        <div id="header">
+            <div>
+                <ul id="navigation">
+                    <li class="selected">
+                        <a>Music Recommendation Powered by Big Data</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="body" class="home">
+            <div>
+                <p align="center">
+                    <iframe scrolling="no" frameborder=0 src="{{ bubble_url }}" width=600 height=630></iframe>
+                </p>
+                <p align="center">
+                    <input type="button" name="submit0" value="Not like!" onclick="void score_n();">
+                    <input type="button" name="submit1" value="Like!" onclick="void score_p();">
+                </p>
+            </div>
+            <div class="body">
+                <div>
+                    <div>
+                        <h1>Big Data Course Project</h1>
+                        <h2>Just Enjoy the Music!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
