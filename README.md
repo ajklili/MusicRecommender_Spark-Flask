@@ -1,4 +1,4 @@
-# Smart_Music_Recommendation
+# Online Music Recommender using Spark (ALS algorithm)
 Final Project from team 201612-17
 
 Files Description:
